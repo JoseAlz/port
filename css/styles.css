@@ -1,0 +1,253 @@
+/* CSS TOC 
+C_01 Global Styles – (body, paragraphs, lists, etc)
+C_02 Header
+C_03 Page Structure
+C_04 Headings
+C_05 Text Styles
+C_06 Navigation
+C_08 Forms
+C_09 Comments
+C_10 Extras.
+Codepen base by Alison de Kruiff thanks!. 
+*/
+
+/* C_01 Global Styles */
+body {
+  font-family: "Open Sans", verdana, arial, sans-serif;
+  position: relative;
+  color: #605951;
+}
+p {
+  font-size: 12px;
+  line-height: 135%;
+}
+li {
+  padding-bottom: 5px;
+}
+.gray-background ul {
+  list-style: none;
+  padding: 0;
+}
+.gray-background li {
+  font-size: 16px;
+  line-height: 165%;
+  padding-left: 1.3em;
+}
+
+.gray-background li:before {
+  content: "\f054"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  color: #111010;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+  font-size: 0.6em;
+}
+.gray-background li:nth-child(odd):before {
+  color: #0b062a;
+}
+.gray-background li ul li:before {
+  content: "\f0da"; /* FontAwesome Unicode */
+  font-size: 0.8em;
+}
+img {
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+/*C_02 Header*/
+.header-background {
+  background-color: #211c6a;
+  color: #fff;
+}
+
+/*C_03 Page Structure*/
+section {
+  padding-top: 130px;
+  margin-top: -130px;
+}
+figure img {
+  width: 90%;
+}
+footer {
+  background-color: #61a6ab;
+  color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+}
+.float-left {
+  float: left;
+}
+.folio img {
+  margin: 20px;
+}
+.figure {
+  background-color: #f6f1e9;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.figure:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.figure-caption {
+  margin: 0 20px 20px 20px;
+}
+.padding-top {
+  padding-top: 160px;
+}
+
+/*C_04 Headings*/
+
+h1 {
+  font-family: "Lato", "Open Sans", helvetica, verdana, arial, sans-serif;
+  color: #605951;
+  font-weight: 100;
+}
+h2 {
+  padding-top: 20px;
+  font-family: "Lato", "Open Sans", helvetica, verdana, arial, sans-serif;
+  color: #61a6ab;
+  font-size: 3em;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #61a6ab;
+}
+h3 {
+  line-height: 155%;
+}
+h4 {
+  letter-spacing: 3px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/*C_05 Text Styles*/
+h1 .bolder {
+  font-weight: 400;
+}
+.white-background h2 {
+  color: #61a6ab;
+}
+a {
+  text-decoration: none;
+  color: #335d60;
+}
+a:link {
+  color: #335d60;
+}
+a:visited {
+  color: #525252;
+}
+a:hover {
+  color: #335d60;
+}
+a:active {
+  color: #cc333f;
+}
+
+/*C_06 Navigation*/
+
+.navbar-default {
+  background-color: #fff;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.5);
+}
+.nav {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #605951;
+  background-color: #fff;
+}
+.nav-pills > li > a {
+  color: #265073;
+  background-color: #fff;
+}
+.nav-pills > li > a:link {
+  background-color: #fff;
+}
+.nav-pills > li > a:visited {
+  background-color: #fff;
+}
+.nav-pills > li > a:hover {
+  color: #9400ff;
+  background-color: #fff;
+}
+.nav-pills > li > a:active {
+  background-color: #fff;
+}
+#myNavbar {
+  margin-top: 1em;
+}
+
+/*C_08 Forms*/
+
+input {
+  margin-bottom: 15px;
+}
+.btn-outline-danger {
+  margin-top: 20px;
+  color: #61a6ab;
+  font-weight: bolder;
+  background-color: #f7efed;
+  border-color: #61a6ab;
+  border-width: 2px;
+}
+
+/* C_09 Comments
+  
+  List of colours
+  Teal #61A6AB
+  Dark teal #335d60
+  Light teal #C8E3E5
+  Brown #605951
+  Light brown #C1B398
+  Red #CC333F
+  */
+
+/* C_10 Extras */
+
+.white-background {
+  background-color: #fff;
+  color: #4d3b3b;
+}
+.gray-background {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #ccc,
+    #1b1a55 15px,
+    #86b6f6 15px,
+    #f0f3ff 30px
+  );
+}
+.gray-background .container {
+  background-color: #f7efed;
+  padding: 20px 60px 20px 60px;
+}
+.white-background .container {
+  background-color: #fff;
+  padding: 20px 60px 20px 60px;
+}
+.indent {
+  margin-left: 40px;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer {
+  background-color: #1b3c73;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
